@@ -1,0 +1,92 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="container-custom py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-xl font-bold text-white mb-4">MODISH</h3>
+            <p className="mb-4">Seu destino para roupas e acessórios estilosos.</p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Twitter size={20} />
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Links Rápidos</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="hover:text-white transition-colors">Início</Link>
+              </li>
+              <li>
+                <Link to="/products" className="hover:text-white transition-colors">Loja</Link>
+              </li>
+              <li>
+                <Link to="/products?newArrivals=true" className="hover:text-white transition-colors">Lançamentos</Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-white transition-colors">Sobre Nós</Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-white transition-colors">Contato</Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Categorias</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/products?gender=female" className="hover:text-white transition-colors">Feminino</Link>
+              </li>
+              <li>
+                <Link to="/products?gender=male" className="hover:text-white transition-colors">Masculino</Link>
+              </li>
+              <li>
+                <Link to="/products?category=accessories" className="hover:text-white transition-colors">Acessórios</Link>
+              </li>
+              <li>
+                <Link to="/products?category=clothing" className="hover:text-white transition-colors">Roupas</Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Contato</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
+                <span>Rua da Moda, 123 - Centro</span>
+              </li>
+              <li className="flex items-center">
+                <Phone size={18} className="mr-2 flex-shrink-0" />
+                <span>(11) 99999-9999</span>
+              </li>
+              <li className="flex items-center">
+                <Mail size={18} className="mr-2 flex-shrink-0" />
+                <span>contato@modish.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p>© {new Date().getFullYear()} Modish. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
