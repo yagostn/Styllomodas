@@ -46,7 +46,7 @@ const Header: React.FC = () => {
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             
-            <Link to="/" className="text-2xl font-bold text-primary-600">MODISH</Link>
+            <Link to="/" className="text-2xl font-bold text-primary-600">Styllo Modas</Link>
           </div>
           
           <nav className="hidden lg:flex items-center space-x-8">

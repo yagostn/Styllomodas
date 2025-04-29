@@ -1,24 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Send } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-darkgold-200 text-gray-300">
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">MODISH</h3>
-            <p className="mb-4">Seu destino para roupas e acessórios estilosos.</p>
+            <h3 className="text-xl font-bold text-white mb-4">Styllo Modas</h3>
+            <p className="mb-4">A Moda Ao Seu Estilo.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Facebook size={20} />
+                <Send size={20} />
               </a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Twitter size={20} />
+                <Mail size={20} />
               </a>
             </div>
           </div>
@@ -67,22 +67,22 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span>Rua da Moda, 123 - Centro</span>
+                <span>Rua 88, 03 - Marcos Freire II</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
-                <span>(11) 99999-9999</span>
+                <span>(79) 998992944</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
-                <span>contato@modish.com</span>
+                <span>styllomodas10@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p>© {new Date().getFullYear()} Modish. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Styllo Modas. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
