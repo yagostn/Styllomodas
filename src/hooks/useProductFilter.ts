@@ -11,10 +11,10 @@ export const useProductFilter = () => {
     minPrice: searchParams.get('minPrice') ? Number(searchParams.get('minPrice')) : undefined,
     maxPrice: searchParams.get('maxPrice') ? Number(searchParams.get('maxPrice')) : undefined,
     gender: searchParams.getAll('gender').length > 0 
-      ? searchParams.getAll('gender') as ('male' | 'female' | 'unisex')[] 
+      ? searchParams.getAll('gender') as ('masculino' | 'feminino' | 'infantil' | 'infantil')[] 
       : undefined,
     category: searchParams.getAll('category').length > 0 
-      ? searchParams.getAll('category') as ('clothing' | 'accessories')[] 
+      ? searchParams.getAll('category') as ('roupas' | 'acessórios' | 'calçados')[] 
       : undefined,
     inStock: searchParams.get('inStock') === 'true' ? true : undefined,
     newArrivals: searchParams.get('newArrivals') === 'true' ? true : undefined,
