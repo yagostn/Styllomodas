@@ -61,7 +61,9 @@ const CheckoutPage: React.FC = () => {
       pix: 'PIX',
       dinheiro: 'Dinheiro',
     }[form.formaPagamento];
-    
+  
+    //Mensagem do pedido
+    // Formatação da mensagem para o WhatsApp  
     const orderDetails = `
 *Novo Pedido*
 ------------------------
@@ -78,7 +80,7 @@ Endereço: ${form.endereco}
     `;
     
     const encodedMessage = encodeURIComponent(orderDetails);
-    const whatsappNumber = '5511999999999'; // Substitua pelo número do WhatsApp real
+    const whatsappNumber = '5579998992944'; 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
     clearCart();

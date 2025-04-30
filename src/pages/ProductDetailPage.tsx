@@ -78,12 +78,12 @@ const ProductDetailPage: React.FC = () => {
         </button>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Product images */}
+          {/* Imagens do produto */}
           <div>
             <ImageGallery images={product.images} alt={product.name} />
           </div>
           
-          {/* Product info */}
+          {/* Informações do produto */}
           <div>
             <div className="mb-6">
               <div className="flex justify-between items-start">
@@ -95,10 +95,10 @@ const ProductDetailPage: React.FC = () => {
                 </div>
                 <div>
                   {!product.inStock && (
-                    <span className="badge-out-of-stock">Out of Stock</span>
+                    <span className="badge-out-of-stock">Fora de estoque</span>
                   )}
                   {isNewArrival && (
-                    <span className="badge-new ml-2">New Arrival</span>
+                    <span className="badge-new ml-2">Novidades</span>
                   )}
                 </div>
               </div>
@@ -110,10 +110,10 @@ const ProductDetailPage: React.FC = () => {
             <div className="border-t border-b border-gray-200 py-6 mb-6">
               <p className="text-gray-700 mb-4">{product.description}</p>
               
-              {/* Size selector */}
+              {/* Seletor de tamanho */}
               {product.sizes && product.sizes.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="font-medium mb-2">Size</h3>
+                  <h3 className="font-medium mb-2">Tamanho</h3>
                   <div className="flex flex-wrap gap-2">
                     {product.sizes.map((size) => (
                       <button
@@ -133,10 +133,10 @@ const ProductDetailPage: React.FC = () => {
                 </div>
               )}
               
-              {/* Color selector */}
+              {/* Seletor de cores */}
               {product.colors && product.colors.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="font-medium mb-2">Color</h3>
+                  <h3 className="font-medium mb-2">Cor</h3>
                   <div className="flex flex-wrap gap-3">
                     {product.colors.map((color) => (
                       <button
@@ -165,9 +165,9 @@ const ProductDetailPage: React.FC = () => {
                 </div>
               )}
               
-              {/* Quantity selector */}
+              {/* Seletor de quantidade */}
               <div>
-                <h3 className="font-medium mb-2">Quantity</h3>
+                <h3 className="font-medium mb-2">Quantidade</h3>
                 <div className="flex items-center">
                   <button
                     className="px-3 py-1 border border-gray-300 rounded-l-md disabled:opacity-50"
@@ -190,7 +190,7 @@ const ProductDetailPage: React.FC = () => {
               </div>
             </div>
             
-            {/* Action buttons */}
+            {/* Botões de ação */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button
                 className={`btn-primary flex-1 flex items-center justify-center ${
@@ -202,26 +202,25 @@ const ProductDetailPage: React.FC = () => {
                 {addedToCart ? (
                   <>
                     <Check size={20} className="mr-2" />
-                    Added to Cart
+                    Adicionado ao carrinho
                   </>
                 ) : (
                   <>
                     <ShoppingBag size={20} className="mr-2" />
-                    {product.inStock ? 'Add to Cart' : 'Out of Stock'}
+                    {product.inStock ? 'Adicionar ao carrinho' : 'Fora de estoque'}
                   </>
                 )}
               </button>
               <button
                 className="btn-outline flex items-center justify-center"
               >
-                <Heart size={20} className="mr-2" />
-                Save
+                <Heart size={20} className="mr-2" />Favoritar
               </button>
             </div>
             
-            {/* Payment info */}
+            {/* Informações de pagamento*/}
             <div>
-              <h3 className="font-medium mb-3">Payment Methods</h3>
+              <h3 className="font-medium mb-3">Métodos de pagamento</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                 {PaymentMethods.map((method) => (
                   <div 
@@ -234,7 +233,7 @@ const ProductDetailPage: React.FC = () => {
                 ))}
               </div>
               <p className="text-sm text-gray-600">
-                After checkout, you'll be redirected to WhatsApp to complete your order.
+                Após a finalização da compra, você será redirecionado ao WhatsApp para concluir seu pedido.
               </p>
             </div>
           </div>
@@ -244,7 +243,7 @@ const ProductDetailPage: React.FC = () => {
   );
 };
 
-// Helper function to map color names to hex codes
+// Função auxiliar para mapear nomes de cores para códigos hexadecimais
 function getColorCode(colorName: string): string {
   const colorMap: { [key: string]: string } = {
     'Black': '#000000',
@@ -273,7 +272,7 @@ function getColorCode(colorName: string): string {
   return colorMap[colorName] || '#CCCCCC';
 }
 
-// Helper function to determine text color based on background color
+// Função auxiliar para determinar a cor do texto com base na cor de fundo
 function getTextColor(colorName: string): string {
   const darkColors = [
     'Black', 'Dark Blue', 'Navy', 'All Black', 'Black/Silver'

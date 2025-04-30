@@ -3,9 +3,9 @@ import { Product } from '../types';
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Classic Denim Jacket',
+    name: 'Jaqueta jeans clássica',
     price: 129.99,
-    description: 'A timeless denim jacket that never goes out of style. Perfect for layering in any season.',
+    description: 'Uma jaqueta jeans atemporal que nunca sai de moda. Perfeita para usar em qualquer estação.',
     gender: 'unisex',
     category: 'clothing',
     images: [
@@ -21,9 +21,9 @@ export const products: Product[] = [
   },
   {
     id: '2',
-    name: 'Leather Crossbody Bag',
+    name: 'Bolsa tiracolo de couro',
     price: 89.99,
-    description: 'Stylish leather crossbody bag with multiple compartments and adjustable strap.',
+    description: 'Bolsa tiracolo de couro estilosa com vários compartimentos e alça ajustável.',
     gender: 'female',
     category: 'accessories',
     images: [
@@ -38,9 +38,9 @@ export const products: Product[] = [
   },
   {
     id: '3',
-    name: 'Summer Floral Dress',
+    name: 'Vestido floral de verão',
     price: 59.99,
-    description: 'Light and airy floral dress, perfect for summer days and special occasions.',
+    description: 'Vestido floral leve e arejado, perfeito para dias de verão e ocasiões especiais.',
     gender: 'female',
     category: 'clothing',
     images: [
@@ -55,9 +55,9 @@ export const products: Product[] = [
   },
   {
     id: '4',
-    name: 'Slim Fit Chinos',
+    name: 'Calças justas',
     price: 79.99,
-    description: 'Comfortable and stylish slim fit chinos for a casual yet refined look.',
+    description: 'Calça chino slim fit, confortável e estilosa para um visual casual e refinado.',
     gender: 'male',
     category: 'clothing',
     images: [
@@ -72,9 +72,9 @@ export const products: Product[] = [
   },
   {
     id: '5',
-    name: 'Minimalist Watch',
+    name: 'Relógio minimalista',
     price: 149.99,
-    description: 'Elegant minimalist watch with leather strap and sapphire crystal.',
+    description: 'Relógio minimalista elegante com pulseira de couro e cristal de safira.',
     gender: 'unisex',
     category: 'accessories',
     images: [
@@ -89,9 +89,9 @@ export const products: Product[] = [
   },
   {
     id: '6',
-    name: 'Oversized Knit Sweater',
+    name: 'Suéter de malha oversized',
     price: 69.99,
-    description: 'Cozy oversized knit sweater for those chilly days and nights.',
+    description: 'Suéter de malha grande e aconchegante para os dias e noites frios.',
     gender: 'female',
     category: 'clothing',
     images: [
@@ -106,9 +106,9 @@ export const products: Product[] = [
   },
   {
     id: '7',
-    name: 'Leather Wallet',
+    name: 'Carteira de couro',
     price: 49.99,
-    description: 'Genuine leather wallet with multiple card slots and bill compartment.',
+    description: 'Carteira de couro legítimo com vários compartimentos para cartões e notas.',
     gender: 'male',
     category: 'accessories',
     images: [
@@ -122,9 +122,9 @@ export const products: Product[] = [
   },
   {
     id: '8',
-    name: 'Athletic Sneakers',
+    name: 'Tênis esportivos',
     price: 119.99,
-    description: 'Comfortable athletic sneakers perfect for workouts or casual wear.',
+    description: 'Tênis esportivos confortáveis, perfeitos para treinos ou uso casual.',
     gender: 'unisex',
     category: 'accessories',
     images: [

@@ -24,14 +24,14 @@ const SearchBar: React.FC = () => {
     setQuery('');
     navigate('/products');
   };
-  
+  // barra de pesquisa para produtos
   return (
     <form onSubmit={handleSearch} className="relative w-full max-w-xl mx-auto">
       <div className="relative">
         <input
           type="text"
           className="input pr-16"
-          placeholder="Search for products..."
+          placeholder="Pesquisar produtos..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -41,7 +41,7 @@ const SearchBar: React.FC = () => {
               type="button"
               className="p-2 text-gray-500 hover:text-gray-700"
               onClick={clearSearch}
-              aria-label="Clear search"
+              aria-label="Limpar pesquisa"
             >
               <X size={18} />
             </button>
@@ -49,7 +49,7 @@ const SearchBar: React.FC = () => {
           <button
             type="submit"
             className="p-2 text-primary-600 hover:text-primary-800"
-            aria-label="Search"
+            aria-label="Procurar"
           >
             <Search size={18} />
           </button>

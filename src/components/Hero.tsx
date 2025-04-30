@@ -14,24 +14,24 @@ interface HeroSlide {
   cta: string;
   link: string;
 }
-
+//inicio da pagina 
 const heroSlides: HeroSlide[] = [
   {
-    image: 'https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg',
+    image: '/img/capa1.jpg',	
     title: 'Coleção Verão 2025',
     subtitle: 'Descubra as últimas tendências da estação',
     cta: 'Comprar Agora',
     link: '/products?category=clothing',
   },
   {
-    image: 'https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg',
+    image: '/img/capa3.jpg',
     title: 'Acessórios Exclusivos',
     subtitle: 'Complete seu look com nossa seleção premium',
     cta: 'Explorar',
     link: '/products?category=accessories',
   },
   {
-    image: 'https://images.pexels.com/photos/2036646/pexels-photo-2036646.jpeg',
+    image: '/img/capa2.jpg',
     title: 'Lançamentos',
     subtitle: 'Seja o primeiro a usar nossos novos designs',
     cta: 'Ver Coleção',

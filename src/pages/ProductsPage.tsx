@@ -43,7 +43,7 @@ const ProductsPage: React.FC = () => {
       
       <div className="container-custom py-8">
         <div className="lg:grid lg:grid-cols-[280px_1fr] gap-8">
-          {/* Filter button (mobile) */}
+          {/* Botão de filtro (móvel) */}
           <div className="lg:hidden flex justify-between items-center mb-4">
             <button
               onClick={() => setIsFilterOpen(true)}
@@ -71,7 +71,7 @@ const ProductsPage: React.FC = () => {
             </div>
           </div>
           
-          {/* Filter sidebar */}
+          {/* Barra lateral de filtro */}
           <FilterSidebar
             filter={filter}
             onChange={handleFilterChange}
@@ -79,7 +79,7 @@ const ProductsPage: React.FC = () => {
             onClose={() => setIsFilterOpen(false)}
           />
           
-          {/* Products grid */}
+          {/* Grade de produtos */}
           <div>
             <div className="hidden lg:flex justify-between items-center mb-6">
               <p className="text-gray-600">

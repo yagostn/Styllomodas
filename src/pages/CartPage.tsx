@@ -15,10 +15,10 @@ const CartPage: React.FC = () => {
             <div className="bg-gray-100 rounded-full p-6 mb-6">
               <ShoppingBag size={40} className="text-gray-500" />
             </div>
-            <h2 className="text-2xl font-semibold mb-2">Your cart is empty</h2>
-            <p className="text-gray-600 mb-8">Looks like you haven't added any products to your cart yet.</p>
+            <h2 className="text-2xl font-semibold mb-2">Seu carrinho está vazio</h2>
+            <p className="text-gray-600 mb-8">Parece que você ainda não adicionou nenhum produto ao seu carrinho.</p>
             <Link to="/products" className="btn-primary">
-              Continue Shopping
+            Continuar comprando
             </Link>
           </div>
         </div>
@@ -29,10 +29,10 @@ const CartPage: React.FC = () => {
   return (
     <div className="pt-24 pb-16">
       <div className="container-custom">
-        <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
+        <h1 className="text-3xl font-bold mb-8">Carrinho de compras</h1>
         
         <div className="lg:grid lg:grid-cols-[1fr_350px] gap-8">
-          {/* Cart items */}
+          {/* Itens do carrinho */}
           <div className="mb-8 lg:mb-0">
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="space-y-6">
@@ -112,10 +112,10 @@ const CartPage: React.FC = () => {
             </div>
           </div>
           
-          {/* Order summary */}
+          {/* Resumo do pedido */}
           <div>
             <div className="bg-white rounded-lg shadow-sm p-6 sticky top-24">
-              <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
+              <h2 className="text-xl font-semibold mb-4">Resumo do pedido</h2>
               
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
@@ -123,8 +123,8 @@ const CartPage: React.FC = () => {
                   <span className="font-medium">{formatCurrency(getTotal())}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Shipping</span>
-                  <span>Calculated at checkout</span>
+                  <span className="text-gray-600">Envio</span>
+                  <span>Calculado na finalização da compra</span>
                 </div>
                 <div className="border-t border-gray-200 pt-3 mt-3">
                   <div className="flex justify-between">
@@ -138,7 +138,7 @@ const CartPage: React.FC = () => {
                 to="/checkout"
                 className="btn-primary w-full flex items-center justify-center"
               >
-                Proceed to Checkout
+                Fazer o check-out
                 <ArrowRight size={18} className="ml-2" />
               </Link>
               
@@ -147,7 +147,7 @@ const CartPage: React.FC = () => {
                   to="/products"
                   className="text-primary-600 hover:underline text-sm flex items-center justify-center"
                 >
-                  Continue Shopping
+                  Continuar comprando
                 </Link>
               </div>
             </div>

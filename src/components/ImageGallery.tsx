@@ -15,7 +15,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, alt }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   
   if (images.length === 0) {
-    return <div className="bg-gray-200 h-full flex items-center justify-center">No images available</div>;
+    return <div className="bg-gray-200 h-full flex items-center justify-center">Nenhuma imagem disponível</div>;
   }
   
   return (

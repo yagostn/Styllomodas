@@ -45,7 +45,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
   
   return (
     <>
-      {/* Mobile filter overlay */}
+      {/* Sobreposição de filtro móvel */}
       {isOpen && (
         <div 
           className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -53,7 +53,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         />
       )}
       
-      {/* Filter sidebar */}
+      {/* Barra lateral de filtro*/}
       <div className={`
         fixed lg:sticky top-0 lg:top-24 h-full lg:h-auto z-50 lg:z-auto
         transform transition-transform duration-300 ease-in-out
@@ -63,22 +63,22 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
       `}>
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-xl font-semibold">Filters</h3>
+            <h3 className="text-xl font-semibold">Filtros</h3>
             <button
               onClick={onClose}
               className="lg:hidden"
-              aria-label="Close filters"
+              aria-label="Fechar filtros"
             >
               <X size={20} />
             </button>
           </div>
           
-          {/* Price range filter */}
+          {/* Filtro de faixa de preço */}
           <div className="mb-6">
-            <h4 className="font-medium mb-3">Price Range</h4>
+            <h4 className="font-medium mb-3">Faixa de preço</h4>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm text-gray-600 mb-1">Min</label>
+                <label className="block text-sm text-gray-600 mb-1">Mínimo</label>
                 <input
                   type="number"
                   className="input"
@@ -88,7 +88,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-600 mb-1">Max</label>
+                <label className="block text-sm text-gray-600 mb-1">Máximo</label>
                 <input
                   type="number"
                   className="input"
@@ -100,9 +100,9 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
             </div>
           </div>
           
-          {/* Gender filter */}
+          {/* Filtro de gênero */}
           <div className="mb-6">
-            <h4 className="font-medium mb-3">Gender</h4>
+            <h4 className="font-medium mb-3">Gênero</h4>
             <div className="space-y-2">
               <label className="flex items-center">
                 <input
@@ -117,7 +117,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     handleFilterChange({ gender: newGenders.length ? newGenders : undefined });
                   }}
                 />
-                <span>Men</span>
+                <span>Homens</span>
               </label>
               <label className="flex items-center">
                 <input
@@ -132,7 +132,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     handleFilterChange({ gender: newGenders.length ? newGenders : undefined });
                   }}
                 />
-                <span>Women</span>
+                <span>Mulheres</span>
               </label>
               <label className="flex items-center">
                 <input
@@ -147,14 +147,14 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     handleFilterChange({ gender: newGenders.length ? newGenders : undefined });
                   }}
                 />
-                <span>Unisex</span>
+                <span>Unissex</span>
               </label>
             </div>
           </div>
           
-          {/* Category filter */}
+          {/* Filtro de categoria */}
           <div className="mb-6">
-            <h4 className="font-medium mb-3">Category</h4>
+            <h4 className="font-medium mb-3">Categoria</h4>
             <div className="space-y-2">
               <label className="flex items-center">
                 <input
@@ -169,7 +169,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     handleFilterChange({ category: newCategories.length ? newCategories : undefined });
                   }}
                 />
-                <span>Clothing</span>
+                <span>roupas</span>
               </label>
               <label className="flex items-center">
                 <input
@@ -184,14 +184,14 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     handleFilterChange({ category: newCategories.length ? newCategories : undefined });
                   }}
                 />
-                <span>Accessories</span>
+                <span>Acessórios</span>
               </label>
             </div>
           </div>
           
-          {/* Availability filter */}
+          {/* Filtro de disponibilidade */}
           <div className="mb-6">
-            <h4 className="font-medium mb-3">Availability</h4>
+            <h4 className="font-medium mb-3">Disponibilidade</h4>
             <div className="space-y-2">
               <label className="flex items-center">
                 <input
@@ -200,7 +200,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                   checked={localFilter.inStock || false}
                   onChange={(e) => handleFilterChange({ inStock: e.target.checked || undefined })}
                 />
-                <span>In Stock Only</span>
+                <span>Somente em estoque</span>
               </label>
               <label className="flex items-center">
                 <input
@@ -209,24 +209,24 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                   checked={localFilter.newArrivals || false}
                   onChange={(e) => handleFilterChange({ newArrivals: e.target.checked || undefined })}
                 />
-                <span>New Arrivals</span>
+                <span>Novidades</span>
               </label>
             </div>
           </div>
           
-          {/* Action buttons */}
+          {/*Botões de ação */}
           <div className="flex flex-col space-y-3">
             <button
               onClick={applyFilters}
               className="btn-primary w-full"
             >
-              Apply Filters
+              Aplicar Filtros
             </button>
             <button
               onClick={resetFilters}
               className="btn-outline w-full"
             >
-              Reset Filters
+              Redefinir filtros
             </button>
           </div>
         </div>

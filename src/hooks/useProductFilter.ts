@@ -6,7 +6,7 @@ import { products as allProducts } from '../data/products';
 export const useProductFilter = () => {
   const [searchParams] = useSearchParams();
   
-  // Initialize filter from URL search params
+  // Inicializar filtro a partir de parâmetros de pesquisa de URL
   const initialFilter: ProductFilter = {
     minPrice: searchParams.get('minPrice') ? Number(searchParams.get('minPrice')) : undefined,
     maxPrice: searchParams.get('maxPrice') ? Number(searchParams.get('maxPrice')) : undefined,
@@ -24,11 +24,11 @@ export const useProductFilter = () => {
   const [filter, setFilter] = useState<ProductFilter>(initialFilter);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(allProducts);
   
-  // Apply filters
+  // Aplicar filtros
   useEffect(() => {
     let filtered = [...allProducts];
     
-    // Filter by search query
+    // Filtrar por consulta de pesquisa
     if (filter.searchQuery) {
       const query = filter.searchQuery.toLowerCase();
       filtered = filtered.filter(product => 
@@ -37,7 +37,7 @@ export const useProductFilter = () => {
       );
     }
     
-    // Filter by price range
+    // Filtrar por faixa de preço
     if (filter.minPrice !== undefined) {
       filtered = filtered.filter(product => product.price >= filter.minPrice!);
     }
@@ -46,22 +46,22 @@ export const useProductFilter = () => {
       filtered = filtered.filter(product => product.price <= filter.maxPrice!);
     }
     
-    // Filter by gender
+    // Filtrar por gênero
     if (filter.gender && filter.gender.length > 0) {
       filtered = filtered.filter(product => filter.gender!.includes(product.gender));
     }
     
-    // Filter by category
+    // Filtrar por categoria
     if (filter.category && filter.category.length > 0) {
       filtered = filtered.filter(product => filter.category!.includes(product.category));
     }
     
-    // Filter by availability
+    // Filtrar por disponibilidade
     if (filter.inStock) {
       filtered = filtered.filter(product => product.inStock);
     }
     
-    // Filter by new arrivals
+    // Filtrar por novidades
     if (filter.newArrivals) {
       filtered = filtered.filter(product => {
         if (!product.isNewArrival) return false;

@@ -79,7 +79,7 @@ const Header: React.FC = () => {
         </div>
       </div>
       
-      {/* Menu mobile */}
+      {/* Menu móvel*/}
       {isOpen && (
         <div className="lg:hidden bg-white shadow-lg animate-slide-down">
           <div className="container-custom py-4">

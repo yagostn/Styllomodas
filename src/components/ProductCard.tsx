@@ -41,14 +41,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {!product.inStock && (
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <span className="bg-error-600 text-white px-4 py-2 rounded-md font-medium">
-                Out of Stock
+              Fora de estoque
               </span>
             </div>
           )}
           
           {isNewArrival && (
             <span className="badge-new absolute top-2 left-2">
-              New
+              Novo
             </span>
           )}
           
@@ -86,7 +86,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   );
 };
 
-// Helper function to map color names to hex codes
+// Função auxiliar para mapear nomes de cores para códigos hexadecimais
 function getColorCode(colorName: string): string {
   const colorMap: { [key: string]: string } = {
     'Black': '#000000',

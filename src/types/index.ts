@@ -3,14 +3,15 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  gender: 'male' | 'female' | 'unisex';
-  category: 'clothing' | 'accessories';
+  gender: 'masculino' | 'feminino' | 'infantil';
+  category: 'roupas' | 'acessórios'| 'calçados';
+  brand: string;
   images: string[];
   sizes?: string[];
   colors?: string[];
   inStock: boolean;
   isNewArrival: boolean;
-  newUntil?: string; // ISO date string
+  newUntil?: string; // Sequência de data ISO
   featured?: boolean;
 }
 
@@ -24,8 +25,9 @@ export interface CartItem {
 export type ProductFilter = {
   minPrice?: number;
   maxPrice?: number;
-  gender?: ('male' | 'female' | 'unisex')[];
-  category?: ('clothing' | 'accessories')[];
+  gender?: ('masculino' | 'feminino' | 'infantil')[];
+  category?: ('roupas' | 'acessórios'| 'calçados')[];
+  brand: string;
   inStock?: boolean;
   searchQuery?: string;
   newArrivals?: boolean;
