@@ -89,29 +89,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 // Função auxiliar para mapear nomes de cores para códigos hexadecimais
 function getColorCode(colorName: string): string {
   const colorMap: { [key: string]: string } = {
-    'Black': '#000000',
-    'White': '#FFFFFF',
-    'Blue': '#3B82F6',
-    'Light Blue': '#93C5FD',
-    'Dark Blue': '#1E40AF',
-    'Brown': '#92400E',
-    'Tan': '#D4A76A',
-    'Floral Print': '#F472B6',
-    'White Floral': '#FDF2F8',
-    'Blue Floral': '#DBEAFE',
-    'Beige': '#E5E5DB',
-    'Navy': '#172554',
-    'Olive': '#4D7C0F',
-    'Black/Silver': '#6B7280',
-    'Brown/Gold': '#B45309',
-    'Cream': '#FEFCE8',
-    'Gray': '#6B7280',
-    'Dusty Pink': '#F9A8D4',
-    'White/Black': '#E5E7EB',
-    'All Black': '#1F2937',
-    'Gray/Blue': '#94A3B8',
+    'Preto': '#000000',
+    'Branco': '#FFFFFF',
+    'Azul': '#3B82F6',
+    'Azul Claro': '#93C5FD',
+    'Azul Escuro': '#1E40AF',
+    'Marrom': '#92400E',
+    'Caramelo': '#D4A76A',
+    'Floral': '#F472B6',
+    'Floral Branco': '#FDF2F8',
+    'Floral Azul': '#DBEAFE',
+    'Cinza': '#6B7280',
   };
-  
+
   return colorMap[colorName] || '#CCCCCC';
 }
 

@@ -31,7 +31,7 @@ export const products: Product[] = [
     category: 'acessórios',
     brand: 'Leather Luxe',
     images: [
-      'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg',
+      'https://res.cloudinary.com/dsenvvbiz/image/upload/v1746058005/good-friday-scene-with-jesus-christ_cqs7fz.jpg',
       'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress',
     ],
     colors: ['Preto', 'Marrom', 'Caramelo'],
