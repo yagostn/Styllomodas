@@ -14,7 +14,7 @@ interface HeroSlide {
   cta: string;
   link: string;
 }
-//inicio da pagina 
+
 const heroSlides: HeroSlide[] = [
   {
     image: '/img/capa1.jpg',	
@@ -44,9 +44,12 @@ const Hero: React.FC = () => {
     <div className="relative h-[80vh] min-h-[500px] w-full">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
-        navigation
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         effect="fade"
         loop
         className="h-full w-full"
@@ -63,12 +66,12 @@ const Hero: React.FC = () => {
               
               <div className="relative h-full flex items-center">
                 <div className="container-custom text-white">
-                  <div className="max-w-xl animate-fade-in">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h1>
-                    <p className="text-lg md:text-xl mb-8">{slide.subtitle}</p>
+                  <div className="max-w-xl animate-fade-in mt-32">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-8">{slide.title}</h1>
+                    <p className="text-lg md:text-xl mb-12">{slide.subtitle}</p>
                     <Link 
                       to={slide.link}
-                      className="btn-primary"
+                      className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full mt-24"
                     >
                       {slide.cta}
                     </Link>
@@ -79,6 +82,27 @@ const Hero: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <style jsx global>{`
+        .swiper-button-next,
+        .swiper-button-prev {
+          color:rgba(255, 217, 0, 0.73) !important;
+          background: rgba(245, 241, 6, 0.93);
+          width: 20px !important;
+          height: 50px !important;
+          border-radius: 50%;
+          top: 60% !important;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+          font-size: 24px !important;
+        }
+
+        .swiper-pagination {
+          bottom: 0rem !important;
+        }
+      `}</style>
     </div>
   );
 };

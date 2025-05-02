@@ -67,7 +67,7 @@ export const products: Product[] = [
     category: 'calçados',
     brand: 'ComfortStep',
     images: [
-      'https://images.pexels.com/photos/2421374/pexels-photo-2421374.jpeg',
+      'https://res.cloudinary.com/dsenvvbiz/image/upload/v1746050866/cld-sample-5.jpg',
       'https://images.pexels.com/photos/2421374/pexels-photo-2421374.jpeg?auto=compress',
     ],
     sizes: ['37', '38', '39', '40', '41', '42'],
