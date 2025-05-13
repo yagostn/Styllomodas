@@ -62,12 +62,12 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          <div>
+            <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contato</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span>Rua 88, 03 - Marcos Freire II</span>
+                <span>Rua 88, 03 - Marcos Freire II, Nossa Senhora do Socorro - SE</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
@@ -76,6 +76,10 @@ const Footer: React.FC = () => {
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
                 <span>styllomodas10@gmail.com</span>
+                </li>
+                <li className="flex items-center">
+                <Instagram size={18} className="mr-2 flex-shrink-0" />
+                <span>@styllomodas_10</span>
               </li>
             </ul>
           </div>

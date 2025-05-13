@@ -5,7 +5,6 @@ import { formatCurrency } from '../utils/formatters';
 
 interface CheckoutForm {
   nome: string;
-  cidade: string;
   endereco: string;
   formaPagamento: 'credito' | 'debito' | 'pix' | 'dinheiro';
 }
@@ -16,7 +15,6 @@ const CheckoutPage: React.FC = () => {
   
   const [form, setForm] = useState<CheckoutForm>({
     nome: '',
-    cidade: '',
     endereco: '',
     formaPagamento: 'credito',
   });
@@ -36,7 +34,6 @@ const CheckoutPage: React.FC = () => {
     const newErrors: Partial<Record<keyof CheckoutForm, string>> = {};
     
     if (!form.nome.trim()) newErrors.nome = 'Nome é obrigatório';
-    if (!form.cidade.trim()) newErrors.cidade = 'Cidade é obrigatória';
     if (!form.endereco.trim()) newErrors.endereco = 'Endereço é obrigatório';
     
     setErrors(newErrors);
@@ -75,7 +72,6 @@ ${orderItems}
 ------------------------
 *Dados do Cliente:*
 Nome: ${form.nome}
-Cidade: ${form.cidade}
 Endereço: ${form.endereco}
     `;
     
