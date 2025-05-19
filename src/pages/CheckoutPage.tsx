@@ -120,23 +120,6 @@ Endereço: ${form.endereco}
                   </div>
                   
                   <div>
-                    <label htmlFor="cidade" className="block text-sm font-medium text-gray-700 mb-1">
-                      Cidade
-                    </label>
-                    <input
-                      type="text"
-                      id="cidade"
-                      name="cidade"
-                      className={`input ${errors.cidade ? 'border-error-500 focus:ring-error-500 focus:border-error-500' : ''}`}
-                      value={form.cidade}
-                      onChange={handleInputChange}
-                    />
-                    {errors.cidade && (
-                      <p className="mt-1 text-sm text-error-600">{errors.cidade}</p>
-                    )}
-                  </div>
-                  
-                  <div>
                     <label htmlFor="endereco" className="block text-sm font-medium text-gray-700 mb-1">
                       Endereço
                     </label>
