@@ -76,5 +76,23 @@ export const products: Product[] = [
     isNewArrival: true,
     newUntil: '2025-07-30',
     featured: true
-  }
+  },
+  {
+    id: '5',
+    name: 'Bolsa Teste',
+    price: 89.99,
+    description: 'Bolsa tiracolo de couro estilosa com vários compartimentos.',
+    gender: 'masculino',
+    category: 'acessórios',
+    brand: 'Leather Luxe',
+    images: [
+      'https://res.cloudinary.com/dsenvvbiz/image/upload/v1746058005/good-friday-scene-with-jesus-christ_cqs7fz.jpg',
+      'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress',
+    ],
+    colors: ['Preto', 'Marrom', 'Caramelo'],
+    inStock: true,
+    isNewArrival: true,
+    newUntil: '2025-07-15',
+    featured: true
+  },
 ];

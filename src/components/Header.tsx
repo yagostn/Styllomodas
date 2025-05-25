@@ -16,10 +16,10 @@ const Header: React.FC = () => {
   
   const navLinks = [
     { name: 'Início', path: '/' },
-    { name: 'Roupas', path: '/products?category=clothing' },
-    { name: 'Acessórios', path: '/products?category=accessories' },
-    { name: 'Masculino', path: '/products?gender=male' },
-    { name: 'Feminino', path: '/products?gender=female' },
+    { name: 'Roupas', path: '/products?category=roupas' },
+    { name: 'Acessórios', path: '/products?category=acessórios' },
+    { name: 'Masculino', path: '/products?gender=masculino' },
+    { name: 'Feminino', path: '/products?gender=feminino' },
     { name: 'Lançamentos', path: '/products?newArrivals=true' },
   ];
   

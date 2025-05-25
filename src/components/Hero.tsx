@@ -21,14 +21,14 @@ const heroSlides: HeroSlide[] = [
     title: 'Coleção Verão 2025',
     subtitle: 'Descubra as últimas tendências da estação',
     cta: 'Comprar Agora',
-    link: '/products?category=clothing',
+    link: '/products?category=roupas',
   },
   {
     image: '/img/capa3.jpg',
     title: 'Acessórios Exclusivos',
     subtitle: 'Complete seu look com nossa seleção premium',
     cta: 'Explorar',
-    link: '/products?category=accessories',
+    link: '/products?category=acessórios',
   },
   {
     image: '/img/capa2.jpg',
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
                     <p className="text-lg md:text-xl mb-12">{slide.subtitle}</p>
                     <Link 
                       to={slide.link}
-                      className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full mt-24"
+                      className="inline-block bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-full mt-24"
                     >
                       {slide.cta}
                     </Link>
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
         ))}
       </Swiper>
 
-      <style jsx global>{`
+      <style>{`
         .swiper-button-next,
         .swiper-button-prev {
           color:rgba(19, 19, 19, 0.73) !important;

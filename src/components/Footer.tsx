@@ -48,16 +48,16 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Categorias</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/products?gender=female" className="hover:text-white transition-colors">Feminino</Link>
+                <Link to="/products?gender=feminino" className="hover:text-white transition-colors">Feminino</Link>
               </li>
               <li>
-                <Link to="/products?gender=male" className="hover:text-white transition-colors">Masculino</Link>
+                <Link to="/products?gender=masculino" className="hover:text-white transition-colors">Masculino</Link>
               </li>
               <li>
-                <Link to="/products?category=accessories" className="hover:text-white transition-colors">Acessórios</Link>
+                <Link to="/products?category=acessórios" className="hover:text-white transition-colors">Acessórios</Link>
               </li>
               <li>
-                <Link to="/products?category=clothing" className="hover:text-white transition-colors">Roupas</Link>
+                <Link to="/products?category=roupas" className="hover:text-white transition-colors">Roupas</Link>
               </li>
             </ul>
           </div>

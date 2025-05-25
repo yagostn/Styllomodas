@@ -12,19 +12,19 @@ const categories: Category[] = [
   {
     name: "Coleção Feminina",
     image: "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg",
-    link: "/products?gender=female",
+    link: "/products?gender=feminino",
     description: "Designs elegantes e estilosos para a mulher moderna"
   },
   {
     name: "Coleção Masculina",
     image: "https://images.pexels.com/photos/1036627/pexels-photo-1036627.jpeg",
-    link: "/products?gender=male",
+    link: "/products?gender=masculino",
     description: "Estilos clássicos e contemporâneos para todos os homens"
   },
   {
     name: "Acessórios",
     image: "https://images.pexels.com/photos/1374910/pexels-photo-1374910.jpeg",
-    link: "/products?category=accessories",
+    link: "/products?category=acessórios",
     description: "Complete seu look com nossos acessórios selecionados"
   }
 ];
