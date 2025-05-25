@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
       <style jsx global>{`
         .swiper-button-next,
         .swiper-button-prev {
-          color:rgba(255, 217, 0, 0.73) !important;
+          color:rgba(19, 19, 19, 0.73) !important;
           background: rgba(245, 241, 6, 0.93);
           width: 20px !important;
           height: 50px !important;

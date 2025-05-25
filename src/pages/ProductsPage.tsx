@@ -13,7 +13,6 @@ const ProductsPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   
-  // Update URL params when filter changes
   useEffect(() => {
     const params = new URLSearchParams();
     
@@ -34,7 +33,7 @@ const ProductsPage: React.FC = () => {
   
   return (
     <div className="pt-20">
-      <div className="bg-gray-50 py-8">
+      <div className="bg-[#f5f5dc] py-8">
         <div className="container-custom">
           <h1 className="text-3xl font-bold mb-6">Produtos</h1>
           <SearchBar />
@@ -43,7 +42,6 @@ const ProductsPage: React.FC = () => {
       
       <div className="container-custom py-8">
         <div className="lg:grid lg:grid-cols-[280px_1fr] gap-8">
-          {/* Botão de filtro (móvel) */}
           <div className="lg:hidden flex justify-between items-center mb-4">
             <button
               onClick={() => setIsFilterOpen(true)}
@@ -71,7 +69,6 @@ const ProductsPage: React.FC = () => {
             </div>
           </div>
           
-          {/* Barra lateral de filtro */}
           <FilterSidebar
             filter={filter}
             onChange={handleFilterChange}
@@ -79,7 +76,6 @@ const ProductsPage: React.FC = () => {
             onClose={() => setIsFilterOpen(false)}
           />
           
-          {/* Grade de produtos */}
           <div>
             <div className="hidden lg:flex justify-between items-center mb-6">
               <p className="text-gray-600">
@@ -106,7 +102,7 @@ const ProductsPage: React.FC = () => {
             
             {products.length === 0 ? (
               <div className="text-center py-16">
-                <h3 className="text-xl font-medium mb-2">Nenhum Produtos</h3>
+                <h3 className="text-xl font-medium mb-2">Nenhum Produto</h3>
                 <p className="text-gray-600 mb-6">Tente ajustar sua pesquisa ou filtro</p>
                 <button
                   onClick={() => {
@@ -120,7 +116,7 @@ const ProductsPage: React.FC = () => {
               </div>
             ) : (
               <div className={gridView 
-                ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" 
+                ? "grid grid-cols-2 gap-4" 
                 : "space-y-6"
               }>
                 {products.map(product => (

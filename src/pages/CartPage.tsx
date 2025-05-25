@@ -32,7 +32,7 @@ const CartPage: React.FC = () => {
         <h1 className="text-3xl font-bold mb-8">Carrinho de compras</h1>
         
         <div className="lg:grid lg:grid-cols-[1fr_350px] gap-8">
-          {/* Itens do carrinho */}
+          {/* Itens do 'carrinho' */}
           <div className="mb-8 lg:mb-0">
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="space-y-6">

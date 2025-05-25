@@ -5,20 +5,10 @@ import { useCartStore } from '../store/cartStore';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const { items } = useCartStore();
   
   const totalItems = items.reduce((acc, item) => acc + item.quantity, 0);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   
   useEffect(() => {
     setIsOpen(false);
@@ -34,7 +24,7 @@ const Header: React.FC = () => {
   ];
   
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+    <header className="fixed w-full z-50 bg-white shadow-sm">
       <div className="container-custom py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -46,7 +36,7 @@ const Header: React.FC = () => {
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             
-            <Link to="/" className="text-2xl font-bold text-primary-600">Styllo Modas</Link>
+            <Link to="/" className="text-2xl font-bold text-black">Styllo Modas</Link>
           </div>
           
           <nav className="hidden lg:flex items-center space-x-8">
@@ -54,8 +44,8 @@ const Header: React.FC = () => {
               <Link 
                 key={link.name}
                 to={link.path}
-                className={`font-medium hover:text-primary-600 transition-colors ${
-                  location.pathname === link.path ? 'text-primary-600' : 'text-gray-800'
+                className={`font-medium hover:text-black transition-colors ${
+                  location.pathname === link.path ? 'text-black' : 'text-gray-800'
                 }`}
               >
                 {link.name}
@@ -64,13 +54,13 @@ const Header: React.FC = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <Link to="/products" className="hover:text-primary-600 transition-colors">
+            <Link to="/products" className="hover:text-black transition-colors">
               <Search size={20} />
             </Link>
-            <Link to="/cart" className="hover:text-primary-600 transition-colors relative">
+            <Link to="/cart" className="hover:text-black transition-colors relative">
               <ShoppingBag size={20} />
               {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {totalItems}
                 </span>
               )}
@@ -88,8 +78,8 @@ const Header: React.FC = () => {
                 <Link 
                   key={link.name}
                   to={link.path}
-                  className={`font-medium hover:text-primary-600 transition-colors ${
-                    location.pathname === link.path ? 'text-primary-600' : 'text-gray-800'
+                  className={`font-medium hover:text-black transition-colors ${
+                    location.pathname === link.path ? 'text-black' : 'text-gray-800'
                   }`}
                 >
                   {link.name}
